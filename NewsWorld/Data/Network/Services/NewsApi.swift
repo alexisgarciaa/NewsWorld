@@ -22,7 +22,7 @@ extension NewsApi: TargetType {
     var path: String {
         switch self {
         case .getAllNews:
-            return "gh-events/events"
+            return "/v1/news"
         }
     }
 
@@ -36,9 +36,19 @@ extension NewsApi: TargetType {
     var task: Task {
         switch self {
         case let .getAllNews(params):
+                
             return .requestParameters(
                 parameters: [
-                    "sources": params.sources
+                    "access_key": "7806391db310386747a90f5bcaf05fbf",
+                    "sources": params.sources,
+                    "categories": params.categories,
+                    "countries": params.countries,
+                    "languages": params.languages,
+                    "keywords": params.keywords,
+                    "date": params.date,
+                    "sort": params.sort,
+                    "limit": params.limit,
+                    "offset": params.offset
                 ], encoding: URLEncoding()
             )
         }
@@ -58,8 +68,9 @@ extension NewsApi: TargetType {
         var data = Data()
         switch self {
         // TODO: Add data base on the endpoint
-        case let .getAllNews(params):
-            data = mockData.dataEncoded
+            case .getAllNews(_):
+                data = Data()
+//            data = mockData.dataEncoded
         }
         return data
     }
@@ -81,7 +92,7 @@ var mockData = """
             "description": "Elena Rybakina defeated world No. 1 Iga Świątek in straight sets on Friday to reach the Indian Wells final and continue her electric run of form this season.",
             "url": "https://www.cnn.com/2023/03/18/tennis/elena-rybakina-iga-swiatek-indian-wells-spt-intl/index.html",
             "source": "CNN Tennis",
-            "image": "https://cdn.cnn.com/cnnnext/dam/assets/230318081708-01-elena-rybakina-iga-swiatek-indian-wells-super-169.jpg",
+            "image": null,
             "category": "sports",
             "language": "en",
             "country": "us",
