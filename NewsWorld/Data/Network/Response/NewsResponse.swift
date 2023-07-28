@@ -8,10 +8,12 @@ import Foundation
 struct NewsResponses: Codable {
     let pagination: Pagination?
     let data: [Datum?]
+    
+    static var placeHolder: NewsResponses = NewsResponses(pagination: Pagination(limit: 1, offset: 1, count: 1, total: 1), data: [Datum(author: "", title: "", description: "", url: "", source: "", image: "https://cdn.cnn.com/cnnnext/dam/assets/230318081708-01-elena-rybakina-iga-swiatek-indian-wells-super-169.jpg", category: "", language: "", country: "", publishedAt: "")])
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct Datum: Codable, Hashable {
     let author: String?
     let title, description: String?
     let url: String?

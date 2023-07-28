@@ -66,6 +66,7 @@
 		2A1905732A73147D00DD712B /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		2A1905752A73148C00DD712B /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 		2A1905772A7315DC00DD712B /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
+		2A1905792A7431BD00DD712B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 		2A1904FE2A72EFC900DD712B /* NewsWorld */ = {
 			isa = PBXGroup;
 			children = (
+				2A1905792A7431BD00DD712B /* Info.plist */,
 				2A19050D2A72F40400DD712B /* Domain */,
 				2A19050E2A72F41600DD712B /* Data */,
 				2A19050F2A72F42300DD712B /* Dependecies */,
@@ -595,6 +597,7 @@
 				DEVELOPMENT_TEAM = ASR8D44L2N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -624,6 +627,7 @@
 				DEVELOPMENT_TEAM = ASR8D44L2N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

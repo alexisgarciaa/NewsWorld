@@ -5,6 +5,7 @@
 
 import SwiftUI
 
+
 @main
 struct NewsWorldApp: App {
     var body: some Scene {
